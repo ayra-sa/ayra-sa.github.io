@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bismillah</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="sec">
+        <header>
+            <a href="#"><img src="img/fruit.png" class="logo"></a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Product</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="text">
+                <h2>Fresh<br><span>Fruty!</span></h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore velit similique culpa repudiandae numquam, accusamus consequuntur sunt cupiditate, unde accusantium ea delectus quis optio laborum quidem architecto fugit hic iure.</p>
+                <a href="#">More Products</a>
+            </div>
+            <div class="imgBox">
+                <img src="img/orange.png" class="fruit">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="img/mango.png" onclick="imgSlider('img/mango.png');changeBgColor('rgb(203, 233, 35)')"></li>
+            <li><img src="img/orange.png" onclick="imgSlider('img/orange.png');changeBgColor('rgb(231, 91, 40)')"></li>
+            <li><img src="img/strawberry.png" onclick="imgSlider('img/strawberry.png');changeBgColor('rgb(199, 41, 41)')"></li>
+        </ul>
+    </section>
+    <script type="text/javascript">
+        function imgSlider(anything) {
+            document.querySelector('.fruit').src = anything;
+        }
+        function changeBgColor(color) {
+            const sec = document.querySelector('.sec');
+            sec.style.background = color;
+        }
+    </script>
+</body>
+</html>
