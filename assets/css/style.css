@@ -5,10 +5,24 @@
     box-sizing: border-box;
     outline: none;
 }
+/* css variables */
+:root {
+    --bg-black-900: #000;
+    --bg-black-100: #ddd;
+    --bg-black-50: #eff0f4;
+    --text-black-900: #000;
+    --text-black-700: #555;
+    --text-black-600: #666;
+    --text-black-300: #bbb;
+    --outer-shadow: 3px 3px 3px #d0d0d0, -3px -3px 3px #f8f8f8;
+    --outer-shadow-0: 0 0 0 #d0d0d0, 0 0 0 #f8f8f8;
+    --inner-shadow: inset 3px 3px 3px #d0d0d0, inset -3px -3px 3px #f8f8f8;
+}
 body {
     font-size: 16px;
     line-height: 1.5;
-    overflow-x: hidden
+    overflow-x: hidden;
+    background-color: var(--bg-black-50);
 }
 *:not(i) {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -40,6 +54,28 @@ img{
     max-width: 1140px;
     margin: auto;
 }
+.outer-shadow {
+    box-shadow: var(--outer-shadow);
+}
+.hover-in-shadow {
+    position: relative;
+    z-index: 1;
+}
+.hover-in-shadow:hover {
+    box-shadow: var(--outer-shadow-0);
+}
+.hover-in-shadow:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+.hover-in-shadow:hover:after {
+    box-shadow: var(--inner-shadow);
+}
 
 /* header */
 .header {
@@ -64,14 +100,32 @@ img{
 .header .hamburger-btn {
     height: 40px;
     width: 40px;
-    box-shadow: 0 0 10px rgb(184, 182, 182);
     display: flex;
     align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
     justify-content: center;
+    transition: all 0.3s ease;
 }
 .header .hamburger-btn span {
     display: block;
     height: 2px;
     width: 16px;
-    background-color: red;
+    background-color: var(--bg-black-900);
+    position: relative;
+}
+.header .hamburger-btn span:before,
+.header .hamburger-btn span:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-black-900);
+}
+.header .hamburger-btn span:before {
+    top: -6px;
+}
+.header .hamburger-btn span:after {
+    top: 6px;
 }
