@@ -376,7 +376,7 @@ img{
 
 /* about section */
 .about-sec {
-    padding: 80px 0 80px;
+    padding: 80px 0 0;
     min-height: 100vh;
 }
 .about-sec .about-img {
@@ -461,6 +461,7 @@ img{
     flex: 0 0 50%;
     max-width: 50%;
     padding: 0 15px;
+    margin-bottom: 20px;
 }
 .about-sec .skill-item p {
     font-size: 16px;
@@ -471,4 +472,87 @@ img{
 .about-sec .progress {
     height: 20px;
     border-radius: 10px;
+    position: relative;
+}
+.about-sec .progress-bar {
+    background-color: var(--text-black-900);
+    height: 10px;
+    left: 7px;
+    top: 5px;
+    border-radius: 10px;
+    position: absolute;
+}
+.about-sec .progress-bar span {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: var(--text-black-600);
+    font-size: 16px;
+    margin-top: -40px;
+}
+.about-sec .experience {
+    padding-bottom: 80px;
+}
+.about-sec .timeline {
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+}
+.about-sec .timeline::before {
+    content: '';
+    width: 1px;
+    height: 100%;
+    left: 50%;
+    top: 0;
+    background-color: var(--bg-black-100);
+    position: absolute;
+}
+.about-sec .timeline-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 0 15px;
+}
+.about-sec .timeline-item:nth-child(odd) {
+    padding-right: calc(50% + 50px);
+    text-align: right;
+}
+.about-sec .timeline-item-inner {
+    padding: 30px;
+    border-radius: 5px;
+    position: relative;
+}
+.about-sec .timeline-item-inner .icon {
+    height: 40px;
+    width: 40px;
+    background-color: var(--bg-black-50);
+    line-height: 40px;
+    border: 1px solid var(--bg-black-100);
+    color: var(--skin-color);
+    text-align: center;
+    border-radius: 50%;
+    position: absolute;
+    /* top: 18px; */
+}
+.about-sec .timeline-item:nth-child(odd) .icon {
+    right: -70px;
+}
+.about-sec .timeline-item:nth-child(even) .icon {
+    left: -70px;
+}
+.about-sec .timeline-item-inner span {
+    display: block;
+    color: var(--skin-color);
+    font-weight: 500;
+    margin: 0 0 10px;
+}
+.about-sec .timeline-item-inner h3 {
+    font-weight: 600;
+    margin: 0 0 5px;
+    color: var(--text-black-700);
+    font-size: 20px;
+}
+.about-sec .timeline-item-inner p {
+    margin: 15px 0 0;
+    color: var(--text-black-600);
+    font-size: 16px;
 }
