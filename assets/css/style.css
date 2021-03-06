@@ -456,6 +456,7 @@ img{
 .about-sec .tab-content {
     flex: 0 0 100%;
     max-width: 100%;
+    display: none;
 }
 .about-sec .skill-item {
     flex: 0 0 50%;
@@ -521,6 +522,18 @@ img{
     border-radius: 5px;
     position: relative;
 }
+.about-sec .timeline-item-inner::before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 1px;
+    background-color: var(--bg-black-100);
+    top: 47px;
+    z-index: -1;
+}
+.about-sec .timeline-item:nth-child(odd) .timeline-item-inner::before {
+    right: -30px;
+} 
 .about-sec .timeline-item-inner .icon {
     height: 40px;
     width: 40px;
