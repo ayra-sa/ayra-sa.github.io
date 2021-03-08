@@ -644,3 +644,11 @@ img{
     color: var(--text-black-600);
     margin: 0;
 }
+/* portofolio section */
+.portofolio-sec {
+    padding: 80px 0 80px;
+    min-height: 100vh;
+}
+.portofolio-sec .section-title {
+    margin-bottom: 40px;
+}
