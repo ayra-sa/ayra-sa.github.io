@@ -1,3 +1,28 @@
+// nav menu
+(() => {
+    const hamburgerBtn = document.querySelector(".hamburger-btn"),
+    navMenu = document.querySelector(".nav-menu"),
+    closeNavBtn = navMenu.querySelector(".close-nav");
+
+    hamburgerBtn.addEventListener("click", showNav);
+    closeNavBtn.addEventListener("click", hideNav);
+
+    function showNav(){
+        navMenu.classList.add("open")
+    }
+    function hideNav(){
+        navMenu.classList.remove("open")
+        fadeOut()
+    }
+    function fadeOut(){
+        document.querySelector(".fade-out").classList.add("active");
+        setTimeout(() =>{
+            document.querySelector(".fade-out").classList.remove("active");
+        }, 300)
+    }
+})();
+
+
 // about section
 (() =>{
     const aboutSection = document.querySelector(".about-sec"),
@@ -19,3 +44,14 @@
         }
     })
 })();
+
+// hide all sections
+(() => {
+
+    const sections = document.querySelectorAll(".section");
+    sections.forEach((section) =>{
+        if (condition) {
+            
+        }
+    })
+})
