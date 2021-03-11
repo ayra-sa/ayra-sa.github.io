@@ -9,6 +9,7 @@
 
     function showNav(){
         navMenu.classList.add("open")
+        
     }
     function hideNav(){
         navMenu.classList.remove("open")
@@ -20,6 +21,45 @@
             document.querySelector(".fade-out").classList.remove("active");
         }, 300)
     }
+    // attach an event handler to document
+    document.addEventListener("click", (event) =>{
+        if (event.target.classList.contains('link-item')) {
+            // make sure event.target.hash has a value before overridding default behavior
+            if (event.target.hash !=="") {
+                // prevent default anchor click behavior
+                event.preventDefault();
+                const hash = event.target.hash;
+                // deactivate existing active 'section'
+                document.querySelector(".section.active").classList.add("hide");
+                document.querySelector(".section.active").classList.remove("active");
+                // active new 'section'
+                document.querySelector(hash).classList.add("active");
+                document.querySelector(hash).classList.remove("hide");
+                // deactivate existing active navigation menu 'link-item'
+                navMenu.querySelector(".active").classList.add("outer-shadow", "hover-in-shadow");
+                navMenu.querySelector(".active").classList.remove("active", "inner-shadow");
+                // if clicked 'link-item is contained within the nav menu
+                if(navMenu.classList.contains("open")){
+                // activate new navigation menu 'link-item'
+                    event.target.classList.add("active", "inner-shadow");
+                    event.target.classList.remove("outer-shadow", "hover-in-shadow");
+                // hide nav menu
+                    hideNav();
+                }
+                else{
+                    let navItems = navMenu.querySelectorAll(".link-item");
+                    navItems.forEach((item) =>{
+                        if (hash === item.hash){
+                            // activate new navigation menu 'link-item'
+                            item.classList.add("active", "inner-shadow");
+                            item.classList.remove("outer-shadow", "hover-in-shadow");
+                        }
+                    })
+                    fadeOut();
+                }
+            }
+        }
+    })
 })();
 
 
