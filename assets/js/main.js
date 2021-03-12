@@ -8,18 +8,18 @@
     closeNavBtn.addEventListener("click", hideNav);
 
     function showNav(){
-        navMenu.classList.add("open")
+        navMenu.classList.add("open");
         
     }
     function hideNav(){
-        navMenu.classList.remove("open")
-        fadeOut()
+        navMenu.classList.remove("open");
+        fadeOut();
     }
     function fadeOut(){
         document.querySelector(".fade-out").classList.add("active");
         setTimeout(() =>{
             document.querySelector(".fade-out").classList.remove("active");
-        }, 300)
+        }, 300);
     }
     // attach an event handler to document
     document.addEventListener("click", (event) =>{
@@ -57,11 +57,16 @@
                     })
                     fadeOut();
                 }
+                // add hash to url
+                window.location.hash = hash;
             }
         }
     })
 })();
 
+function bodyScrolling(){
+    document.body.classList.toggle("hidden-scroll");
+}
 
 // about section
 (() =>{
