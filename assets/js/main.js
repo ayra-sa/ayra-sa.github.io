@@ -9,11 +9,12 @@
 
     function showNav(){
         navMenu.classList.add("open");
-        
+        bodyScrolling();
     }
     function hideNav(){
         navMenu.classList.remove("open");
         fadeOut();
+        bodyScrolling();
     }
     function fadeOut(){
         document.querySelector(".fade-out").classList.add("active");
@@ -95,8 +96,8 @@ function bodyScrolling(){
 
     const sections = document.querySelectorAll(".section");
     sections.forEach((section) =>{
-        if (condition) {
-            
+        if (!section.classList.contains("active")) {
+            section.classList.add("hide");
         }
     })
-})
+})();

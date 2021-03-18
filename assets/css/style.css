@@ -18,6 +18,20 @@
     --outer-shadow-0: 0 0 0 #d0d0d0, 0 0 0 #f8f8f8;
     --inner-shadow: inset 3px 3px 3px #d0d0d0, inset -3px -3px 3px #f8f8f8;
 }
+/* dark theme */
+body.dark {
+    --bg-black-900: #fff;
+    --bg-black-100: #353535;
+    --bg-black-50: #2b2c2f;
+    --bg-opacity: rgba(43,44,47, .5);
+    --text-black-900: #fff;
+    --text-black-700: #fff;
+    --text-black-600: #bbb;
+    --outer-shadow: 3px 3px 3px #222327, -3px -3px 3px #363636;
+    --outer-shadow-0: 0 0 0 #222327, 0 0 0 #363636;
+    --inner-shadow: inset 3px 3px 3px #222327, inset -3px -3px 3px #363636;
+}
+
 body {
     font-size: 16px;
     line-height: 1.5;
@@ -208,6 +222,9 @@ img{
     font-weight: 600;
     color: var(--skin-color);
 }
+.section.hide {
+    display: none;
+}
 
 /* header */
 .header {
@@ -306,7 +323,7 @@ img{
     visibility: visible;
     opacity: 1;
     z-index: 999;
-    transition: all .6 ease-in;
+    transition: all .3 ease-in;
 }
 .nav-menu .close-nav {
     width: 40px;
@@ -348,7 +365,7 @@ img{
     font-size: 20px;
     font-weight: 500;
     border-radius: 30px;
-    color: var(--text-black-700);
+    color: var(--text-black-600);
     padding: 5px 20px;
     text-transform: capitalize;
     transition: all .3s ease;
@@ -395,7 +412,7 @@ img{
 .home-sec .home-text h1 {
     font-size: 20px;
     font-weight: 500;
-    color: var(--text-black-700);
+    color: var(--text-black-600);
     margin: 0;
 }
 .home-sec .home-text .btn-1 {
@@ -644,6 +661,7 @@ img{
     transition: all .3s ease;
     margin: 0 auto 30px;
     position: relative;
+    color: var(--text-black-600);
 }
 .service-sec .service-item-inner .icon::after {
     content: '';

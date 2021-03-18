@@ -1,0 +1,31 @@
+@media(max-width:768px) {
+    .home-sec .home-text,
+    .home-sec .home-img {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .home-sec .home-text {
+        order: 2;
+        text-align: center;
+    }
+    .home-sec .fullscreen {
+        padding: 100px 0;
+    }
+    .home-sec .home-img .img-box {
+        margin-bottom: 40px;
+        max-width: 350px;
+    }
+    .effect-3 {
+        margin-left: -60px;
+    }
+    .effect-4 {
+        left: 15%;
+    }
+    .effect-5 {
+        right: 4%;
+    }
+}
+
+@media(max-width: 574px) {
+    .home-sec .
+}
