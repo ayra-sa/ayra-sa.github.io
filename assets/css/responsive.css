@@ -1,6 +1,21 @@
+@media(max-width:991px){
+    .portfolio-sec .portfolio-item,
+    .service-sec .service-item {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
 @media(max-width:768px) {
     .home-sec .home-text,
-    .home-sec .home-img {
+    .home-sec .home-img,
+    .about-sec .skill .skill-item,
+    .about-sec .about-info,
+    .about-sec .about-img,
+    .portfolio-sec .portfolio-item,
+    .service-sec .service-item,
+    .contact-sec .contact-item,
+    .contact-form .w-50 {
         flex: 0 0 100%;
         max-width: 100%;
     }
@@ -15,6 +30,10 @@
         margin-bottom: 40px;
         max-width: 350px;
     }
+    .about-sec .about-info,
+    .contact-form .submit-btn {
+        text-align: center;
+    }
     .effect-3 {
         margin-left: -60px;
     }
@@ -24,8 +43,44 @@
     .effect-5 {
         right: 4%;
     }
+    .about-sec .about-img {
+        padding-bottom: 30px;
+    }
+    .about-sec .timeline .timeline-item:nth-child(odd){
+        padding-right: 15px;
+        text-align: left;
+        padding-left: 55px;
+    }
+    .about-sec .timeline .timeline-item:nth-child(even){
+        padding-left: 55px;
+    }
+    .about-sec .timeline::before {
+        left: 35px;
+    }
+    .about-sec .timeline .timeline-item:nth-child(odd) .icon {
+        right: auto;
+        left: -60px;
+    }
+    .about-sec .timeline .timeline-item:nth-child(even) .icon {
+        left: -60px;
+    }
+    .about-sec .timeline .timeline-item {
+        margin-bottom: 40px;
+    }
+    .about-sec .timeline .{
+
+    }
 }
 
 @media(max-width: 574px) {
-    .home-sec .
+    .home-sec .home-img .img-box {
+        max-width: 260px;
+    }
+    .home-sec .home-text h2 {
+        font-size: 40px;
+    }
+    .about-sec .about-info {
+        text-align: center;
+    }
+
 }
