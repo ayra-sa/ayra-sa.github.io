@@ -13,7 +13,7 @@
     height: 40px;
     width: 40px;
     font-size: 20px;
-    /* right: 100%; */
+    /* right: 0; */
     margin-right: 15px;
     text-align: center;
     color: var(--text-black-900);
@@ -31,6 +31,7 @@
     top: 0;
 }
 .style-switcher .day-night {
+    position: relative;
     top: 55px;
-    /* right: 0; */
+    right: 0;
 }
