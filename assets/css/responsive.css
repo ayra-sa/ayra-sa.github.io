@@ -46,6 +46,10 @@
     .about-sec .about-img {
         padding-bottom: 30px;
     }
+    .about-sec .about-img .img-box {
+        width: fit-content;
+        margin: auto;
+    }
     .about-sec .timeline .timeline-item:nth-child(odd){
         padding-right: 15px;
         text-align: left;

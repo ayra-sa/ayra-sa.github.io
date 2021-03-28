@@ -109,3 +109,18 @@ window.addEventListener("load", () =>{
         document.querySelector(".preloader").style.display="none";
     },600)
 });
+
+// section
+const scriptURL = 'https://script.google.com/macros/s/AKfycbxJ91kiUsKnLxSlPO0ljVjUAlrF4cvRCLq2V-Gf_LB31UCwskMmhB6rphnsKd_qOPQEYA/exec'
+        const form = document.forms['contact-me']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response =>{
+                form.reset();
+                console.log('Success!', response)
+            })
+                
+            .catch(error => console.error('Error!', error.message))
+        });
