@@ -73,9 +73,9 @@
 }
 
 @media(max-width: 574px) {
-    .home-sec .home-img .img-box {
+    /* .home-sec .home-img .img-box {
         max-width: 260px;
-    }
+    } */
     .home-sec .home-text h2 {
         font-size: 40px;
     }
